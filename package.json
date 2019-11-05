@@ -1,9 +1,26 @@
 {
   "name": "web-srv",
   "version": "0.1.0",
+  "description": "web server",
   "private": true,
+  "author": {
+    "name": "MLRD CHAIN",
+    "email": "dev@milliard.money",
+    "url": "https://milliard.money"
+  },
+  "homepage": "https://github.com/mlrd-chain/web-srv#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlrd-chain/web-srv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mlrd-chain/web-srv/issues",
+    "email": "dev@milliard.money"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "yarn run start:dev",
+    "start:dev": "nodemon ./bin/www",
+    "start:prod": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +29,8 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
