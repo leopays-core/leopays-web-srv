@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web-srv:
+    image: mlrdchain/web-srv:latest
+    environment:
+      NODE_ENV: production
+      DATA_DIR: /data
+      DB_HOST: mongodb
+    volumes:
+      - "../../data:/data"
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "../../data/db:/data"
