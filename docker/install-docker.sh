@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Как установить и использовать Docker в Ubuntu 18.04
 # https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru
