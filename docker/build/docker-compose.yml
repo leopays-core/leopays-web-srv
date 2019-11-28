@@ -7,9 +7,10 @@ services:
       dockerfile: ./docker/build/Dockerfile
     environment:
       NODE_ENV: production
+      PORT: 80
       DATA_DIR: /data
     volumes:
-      - "../../data:/data"
+      - "../../data/web-srv:/data"
     ports:
       - 80:80
       - 443:443
