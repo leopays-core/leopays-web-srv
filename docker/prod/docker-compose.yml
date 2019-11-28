@@ -5,6 +5,7 @@ services:
     image: mlrdchain/web-srv:latest
     environment:
       NODE_ENV: production
+      PORT: 80
       DATA_DIR: /data
       DB_HOST: mongodb
     volumes:
