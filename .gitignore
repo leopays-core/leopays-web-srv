@@ -1,3 +1,9 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+.DS_Store
+*.nosave
+react-app/*
+
 # Logs
 logs
 *.log
@@ -30,13 +36,18 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+build/release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# Typescript v1 declaration files
+# data dir
+data/
+
+dist/
+
+# TypeScript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -59,4 +70,5 @@ typings/
 
 # next.js build output
 .next
-.ignoreforgit
+
+*.missing.json

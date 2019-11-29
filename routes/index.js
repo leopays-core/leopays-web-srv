@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'MLRD CHAIN' });
-});
+
+router.use('/', require('./home'));
+// https://auth0.com/docs
+//router.use('/.well-known', require('./.well-known'));
+
+//router.use('/auth', require('./auth'));
+router.use('/api', require('./api'));
 
 module.exports = router;

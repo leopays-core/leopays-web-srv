@@ -1,6 +1,6 @@
 {
   "name": "web-srv",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "web server",
   "private": true,
   "author": {
@@ -17,20 +17,49 @@
     "url": "https://github.com/mlrd-chain/web-srv/issues",
     "email": "dev@milliard.money"
   },
+  "main": "./bin/www",
   "scripts": {
     "start": "yarn run start:dev",
     "start:dev": "nodemon ./bin/www",
     "start:prod": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "hbs": "~4.0.4",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "@log4js-node/gelf": "^1.0.2",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.1.2",
+    "convict": "^5.2.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.0.6",
+    "helmet": "^3.21.2",
+    "http-errors": "^1.7.3",
+    "i18next": "^19.0.0",
+    "i18next-express-middleware": "^1.8.2",
+    "i18next-node-fs-backend": "^2.1.3",
+    "i18next-sprintf-postprocessor": "^0.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "jsrsasign": "^8.0.12",
+    "jsrsasign-util": "^1.0.0",
+    "jwks-rsa": "^1.6.0",
+    "jws": "^3.2.2",
+    "log4js": "^6.0.0",
+    "mongoose": "^5.7.10",
+    "nodemailer": "^6.3.1",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.2.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "passport-local-mongoose-email": "^0.1.4",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
-  }
+  },
+  "contributors": []
 }
