@@ -1,6 +1,6 @@
 {
   "name": "web-srv",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "LeoPays web server",
   "private": true,
   "author": {
