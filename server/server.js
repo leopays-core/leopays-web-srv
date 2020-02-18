@@ -86,7 +86,8 @@ class Server {
       exclusive: cfg.get('server.exclusive'),
       ipv6Only: cfg.get('server.ipv6Only'),
     };
-    this.http_server.listen(httpOptions);
+    if (cfg.get('server.http_enabled'))
+      this.http_server.listen(httpOptions);
 
     if (cfg.get('server.secure_mode')) {
       const httpsOptions = {
@@ -96,7 +97,8 @@ class Server {
         ipv6Only: cfg.get('server.ipv6Only'),
       };
 
-      this.https_server.listen(httpsOptions);
+      if (cfg.get('server.https_enabled'))
+        this.https_server.listen(httpsOptions);
     }
   }
 
