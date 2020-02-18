@@ -2,12 +2,13 @@
 const path = require('path');
 const detectorConfig = require('./detector-config.js');
 
+
 module.exports = {
   //lng: (process.env.NODE_ENV !== "production") ? 'ru' : 'en',
-  fallbackLng: (process.env.NODE_ENV !== "production") ? 'ru' : 'en',
-  whitelist: ['en', 'ru'],
+  fallbackLng: 'ru',//(process.env.NODE_ENV !== "production") ? 'ru' : 'en',
+  whitelist: ['ru'],//['en', 'ru'],
   nonExplicitWhitelist: false, // if true: 'en-US' as 'en'
-  preload: ['en', 'ru'],
+  preload: ['ru'],//['en', 'ru'],
   ns: [
     'srv-main', 'srv-error'
   ],
@@ -20,7 +21,7 @@ module.exports = {
   saveMissing: true,
   detection: detectorConfig,
   backend: {
-    loadPath: path.join(__dirname, '../public/', '/static/locales/{{lng}}/{{ns}}.json'),
-    addPath: path.join(__dirname, '../public/', '/static/locales/{{lng}}/{{ns}}.missing.json'),
+    loadPath: path.join(__dirname, '../public', '/static/locales/{{lng}}/{{ns}}.json'),
+    addPath: path.join(__dirname, '../public', '/static/locales/{{lng}}/{{ns}}.missing.json'),
   },
 };

@@ -1,5 +1,5 @@
 const i18next = require('i18next');
-const { LanguageDetector } = require("i18next-express-middleware");
+const { LanguageDetector } = require('i18next-express-middleware');
 const FilesystemBackend = require('i18next-node-fs-backend');
 const sprintf = require('i18next-sprintf-postprocessor');
 const i18nextConfig = require('./i18next-config');

@@ -1,12 +1,12 @@
 {
   "name": "web-srv",
   "version": "0.2.0",
-  "description": "web server",
+  "description": "LeoPays web server",
   "private": true,
   "author": {
-    "name": "MLRD CHAIN",
-    "email": "dev@milliard.money",
-    "url": "https://milliard.money"
+    "name": "LeoPays",
+    "email": "dev@LeoPays.com",
+    "url": "https://LeoPays.com"
   },
   "homepage": "https://github.com/mlrd-chain/web-srv#readme",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "bugs": {
     "url": "https://github.com/mlrd-chain/web-srv/issues",
-    "email": "dev@milliard.money"
+    "email": "dev@LeoPays.com"
   },
   "main": "./bin/www",
   "scripts": {

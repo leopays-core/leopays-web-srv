@@ -39,7 +39,7 @@ const schema = {
         arg: "server-http-port",
       },
     },
-    // HTTPS (TLS/SSL)
+    // HTTPS (TLS/SSL) 
     https: {
       port: {
         doc: "The HTTPS port to bind.",

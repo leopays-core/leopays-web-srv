@@ -22,10 +22,10 @@ const redirect = require('../lib/redirect').https_www_redirect;
 
 const app = express();
 hbs.localsAsTemplateData(app);
-app.locals.layout = 'layout-for-react-app';
-app.locals.lang = 'en';
-app.locals.title = 'MLRD CHAIN';
-app.locals.description = 'MLRD CHAIN';
+//app.locals.layout = 'layout-for-react-app';
+app.locals.lang = 'ru';
+app.locals.title = 'LeoPays';
+app.locals.description = 'LeoPays';
 app.locals.noscript = 'You need to enable JavaScript to run this app.';
 
 app.use(helmet());

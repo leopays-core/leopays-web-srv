@@ -19,7 +19,7 @@ const schema = {
     name: {
       doc: "db name",
       format: String,
-      default: "mlrd-chain", //
+      default: "leopays", //
       env: "DB_NAME",
       arg: "db-name",
     },
