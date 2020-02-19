@@ -5,7 +5,7 @@ router.get('/', (req, res, next) => {
   res.render('index', {
     lang: req.language,
     title: req.t('srv-main:proName'),
-    description: 'Загрузка',
+    description: 'Загрузки',
     noscript: req.t('srv-main:noscript'),
   });
 });
