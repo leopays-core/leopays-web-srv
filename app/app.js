@@ -19,7 +19,7 @@ const logger = require('../config/logger').getLogger('app');
 const redirect = require('../lib/redirect').https_www_redirect;
 const routes = require('../routes');
 const models = require('../config/mongodb');
-const session = require('../config/session');
+//const session = require('../config/session');
 
 const passport = require('../config/passport');
 
@@ -49,7 +49,7 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(session());
+//app.use(session());
 app.use(express.static(path.resolve(__dirname, '../react-app')));
 app.use(express.static(path.resolve(__dirname, '../public')));
 
