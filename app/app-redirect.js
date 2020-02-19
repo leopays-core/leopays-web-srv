@@ -22,7 +22,7 @@ const redirect = require('../lib/redirect').https_www_redirect;
 
 const app = express();
 hbs.localsAsTemplateData(app);
-//app.locals.layout = 'layout-for-react-app';
+app.locals.layout = 'layout-for-react-app';
 app.locals.lang = 'ru';
 app.locals.title = 'LeoPays';
 app.locals.description = 'LeoPays';

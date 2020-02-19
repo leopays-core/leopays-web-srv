@@ -27,7 +27,7 @@ const passport = require('../config/passport');
 const app = express();
 
 hbs.localsAsTemplateData(app);
-//app.locals.layout = 'layout-for-react-app';
+app.locals.layout = 'layout-for-react-app';
 app.locals.lang = 'ru';
 app.locals.title = 'LeoPays';
 app.locals.description = 'LeoPays';
