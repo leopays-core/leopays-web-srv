@@ -2,7 +2,6 @@
 
 .DS_Store
 *.nosave
-react-app/*
 
 # Logs
 logs
@@ -72,3 +71,5 @@ typings/
 .next
 
 *.missing.json
+*.ignoreforgit
+react-app/*
