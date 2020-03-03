@@ -86,3 +86,14 @@ cd ~/mlrd-chain/web-srv/docker
 docker pull mlrdchain/web-srv:latest
 sh ./run-prod.sh
 ```
+
+## certbot
+
+Create a file containing just this data:
+
+7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g.pZ3vjRmDs3wFsuLlAKMfECnOxFhl4Hwg2TDAw_0oKBE
+
+And make it available on your web server at this URL:
+
+http://testnet.milliard.money/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
+

@@ -43,7 +43,7 @@ class Server {
     // Create HTTP / HTTPS server.
     if (cfg.get('server.secure_mode')) {
       this.logger.debug('secure mode');
-      this.http_server = http.createServer(this.app_redirect);
+      this.http_server = http.createServer(this.app); //this.app_redirect);
       this.http_server.on('error', onError('http-server'));
       this.http_server.on('listening', onListening('http-server'));
 
