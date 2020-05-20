@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:lts
 
 ENV NODE_ENV production
 ENV DATA_DIR /data

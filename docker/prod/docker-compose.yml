@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web-srv:
-    image: mlrdchain/web-srv:latest
+    image: leopays/web-srv:latest
     environment:
       NODE_ENV: production
       PORT: 80
@@ -15,6 +15,7 @@ services:
       - 443:443
     links:
       - mongodb
+
   mongodb:
     image: mongo
     ports:
