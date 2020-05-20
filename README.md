@@ -54,7 +54,7 @@ Stages:
 
 Make this directory structure:
 ```
-~/mlrd-chain
+~/leopays-core
   /web-srv
     /data
       config.json
@@ -82,8 +82,8 @@ docker rmi -f $(docker images -a)
 #### Docker launching
 
 ```bash
-cd ~/mlrd-chain/web-srv/docker
-docker pull mlrdchain/web-srv:latest
+cd ~/leopays-core/web-srv/docker
+docker pull leopays/web-srv:latest
 sh ./run-prod.sh
 ```
 
@@ -95,5 +95,5 @@ Create a file containing just this data:
 
 And make it available on your web server at this URL:
 
-http://testnet.milliard.money/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
+http://testnet.leopays.dev/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
 
