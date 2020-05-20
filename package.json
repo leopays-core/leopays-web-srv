@@ -5,17 +5,17 @@
   "private": true,
   "author": {
     "name": "LeoPays",
-    "email": "dev@LeoPays.com",
-    "url": "https://LeoPays.com"
+    "email": "developers@leopays.dev",
+    "url": "https://leopays.dev/"
   },
-  "homepage": "https://github.com/mlrd-chain/web-srv#readme",
+  "homepage": "https://github.com/leopays-core/web-srv#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mlrd-chain/web-srv.git"
+    "url": "https://github.com/leopays-core/web-srv.git"
   },
   "bugs": {
-    "url": "https://github.com/mlrd-chain/web-srv/issues",
-    "email": "dev@LeoPays.com"
+    "url": "https://github.com/leopays-core/web-srv/issues",
+    "email": "developers@leopays.dev"
   },
   "main": "./bin/www",
   "scripts": {
