@@ -3,6 +3,7 @@
  * @module /app
 **/
 
+const fs = require('fs');
 const path = require('path');
 const createError = require('http-errors');
 const hbs = require('hbs');
@@ -25,9 +26,10 @@ const passport = require('../config/passport');
 
 
 const app = express();
-
 hbs.localsAsTemplateData(app);
-app.locals.layout = 'layout';//'layout-for-react-app';
+app.locals.layout = fs.existsSync('./react-app') 
+  ? 'layout-for-react-app' 
+  : 'layout';
 app.locals.lang = 'en';
 app.locals.title = 'LeoPays';
 app.locals.description = 'LeoPays - An open source smart contract platform.';
