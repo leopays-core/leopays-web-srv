@@ -43,7 +43,7 @@ class Server {
     // Create HTTP / HTTPS server.
     if (cfg.get('server.secure_mode')) {
       this.logger.debug('secure mode');
-      this.http_server = http.createServer(this.app); //this.app_redirect);
+      this.http_server = http.createServer(this.app_redirect);
       this.http_server.on('error', onError('http-server'));
       this.http_server.on('listening', onListening('http-server'));
 
@@ -86,8 +86,7 @@ class Server {
       exclusive: cfg.get('server.exclusive'),
       ipv6Only: cfg.get('server.ipv6Only'),
     };
-    if (cfg.get('server.http_enabled'))
-      this.http_server.listen(httpOptions);
+    this.http_server.listen(httpOptions);
 
     if (cfg.get('server.secure_mode')) {
       const httpsOptions = {
@@ -97,8 +96,7 @@ class Server {
         ipv6Only: cfg.get('server.ipv6Only'),
       };
 
-      if (cfg.get('server.https_enabled'))
-        this.https_server.listen(httpsOptions);
+      this.https_server.listen(httpsOptions);
     }
   }
 

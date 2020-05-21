@@ -20,9 +20,9 @@ const RequestObject = {
 router.get('/', (req, res, next) => {
   res.render('index', {
     lang: req.language,
-    title: req.t('srv-main:proName'),
-    description: req.t('srv-main:proName'),
-    noscript: req.t('srv-main:noscript'),
+    title: req.t('projName'),
+    description: req.t('projName'),
+    noscript: req.t('noscript'),
   });
 });
 
@@ -32,9 +32,9 @@ router.get('/login',
     console.log(req.user);
     res.render('index', {
       lang: req.language,
-      title: req.t('srv-main:proName'),
-      description: req.t('srv-main:proName'),
-      noscript: req.t('srv-main:noscript'),
+      title: req.t('projName'),
+      description: req.t('projName'),
+      noscript: req.t('noscript'),
     });
   });
 

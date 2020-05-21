@@ -1,19 +1,18 @@
-// src/18n/i18next-config.js
 const path = require('path');
 const detectorConfig = require('./detector-config.js');
 
 
 module.exports = {
   //lng: (process.env.NODE_ENV !== "production") ? 'ru' : 'en',
-  fallbackLng: 'ru',//(process.env.NODE_ENV !== "production") ? 'ru' : 'en',
-  whitelist: ['ru'],//['en', 'ru'],
+  fallbackLng: (process.env.NODE_ENV !== "production") ? 'ru' : 'en',
+  whitelist: ['en', 'ru'],
   nonExplicitWhitelist: false, // if true: 'en-US' as 'en'
-  preload: ['ru'],//['en', 'ru'],
+  preload: ['en', 'ru'],
   ns: [
-    'srv-main', 'srv-error'
+    'srv-common', 'srv-error'
   ],
-  //defaultNS: 'srv-main',  // default namespace (needs no prefix on calling t)
-  //fallbackNS: 'srv-main', // fallback, can be a string or an array of namespaces
+  defaultNS: 'srv-common',  // default namespace (needs no prefix on calling t)
+  //fallbackNS: 'srv-common', // fallback, can be a string or an array of namespaces
   //nsSeparator: true,  // ':'
   //keySeparator: true, // '.'
 

@@ -1,4 +1,3 @@
-// src/18n/detector-config.js
 module.exports = {
   // order and from where user language should be detected
   order: ['path'],//['path' 'path', 'session', 'querystring', 'cookie', 'header' ],

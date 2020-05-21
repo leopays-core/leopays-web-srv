@@ -1,4 +1,3 @@
-// src/18n/logger.js
 const logger = require('../config/logger').getLogger('i18n');
 
 module.exports = {

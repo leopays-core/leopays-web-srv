@@ -3,11 +3,13 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
+
+  console.log('GET home page', req.t);
   res.render('index', {
     lang: req.language,
-    title: req.t('srv-main:proName'),
-    description: req.t('srv-main:proName'),
-    noscript: req.t('srv-main:noscript'),
+    title: req.t('title'),
+    description: req.t('description'),
+    noscript: req.t('noscript'),
   });
 });
 

@@ -7,9 +7,7 @@ services:
       dockerfile: ./docker/build/Dockerfile
     environment:
       NODE_ENV: production
-      PORT: 80
       DATA_DIR: /data
-      DB_HOST: mongodb
     volumes:
       - "../../data/web-srv:/data"
     ports:

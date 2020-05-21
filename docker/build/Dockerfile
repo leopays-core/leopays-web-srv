@@ -3,6 +3,9 @@ FROM node:lts
 ENV NODE_ENV production
 ENV DATA_DIR /data
 
+# Arguments that may be overridden by the user
+ARG release=latest
+
 # Create app directory
 WORKDIR /web-srv
 

@@ -19,7 +19,7 @@ const logger = require('../config/logger').getLogger('app');
 const redirect = require('../lib/redirect').https_www_redirect;
 const routes = require('../routes');
 const models = require('../config/mongodb');
-//const session = require('../config/session');
+const session = require('../config/session');
 
 const passport = require('../config/passport');
 
@@ -27,10 +27,10 @@ const passport = require('../config/passport');
 const app = express();
 
 hbs.localsAsTemplateData(app);
-app.locals.layout = 'layout-for-react-app';
-app.locals.lang = 'ru';
+app.locals.layout = 'layout';//'layout-for-react-app';
+app.locals.lang = 'en';
 app.locals.title = 'LeoPays';
-app.locals.description = 'LeoPays';
+app.locals.description = 'LeoPays - An open source smart contract platform.';
 app.locals.noscript = 'You need to enable JavaScript to run this app.';
 //api/user/auth/...
 app.use(helmet());
@@ -49,12 +49,12 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-//app.use(session());
+app.use(session());
 app.use(express.static(path.resolve(__dirname, '../react-app')));
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.use(handle(i18next, {
-  ignoreRoutes: ['/api'], // or function(req, res, options, i18next) { /* return true to ignore */ }
+  ignoreRoutes: ['/api', '/static'], // or function(req, res, options, i18next) { /* return true to ignore */ }
   removeLngFromUrl: true,
 })); // expose req.t with fixed lng
 // missing keys; make sure the body is parsed (i.e. with [body-parser](https://github.com/expressjs/body-parser#bodyparserjsonoptions))
@@ -94,8 +94,8 @@ app.use((err, req, res, next) => {
       res.render('error', {
         layout: 'layout',
         lang: req.language,
-        title: `${req.t(`srv-error:${message}`)} | ${req.t(`srv-main:proName`)}`,
-        description: `${req.t(`srv-error:${message}`)} | ${req.t(`srv-main:proName`)}`,
+        title: `${req.t(`srv-error:${message}`)} | ${req.t(`projName`)}`,
+        description: `${req.t(`srv-error:${message}`)} | ${req.t(`projName`)}`,
         message: req.t(`srv-error:${message}`),
         error: error,
       });

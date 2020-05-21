@@ -4,8 +4,8 @@
 const express = require('express');
 const router = express.Router();
 
+
 router.use('/jwks.json', require('./jwks'));
 router.use('/openid-configuration', require('./openid-configuration'));
-router.use('/acme-challenge', require('./acme-challenge'));
 
 module.exports = router;
