@@ -52,16 +52,23 @@ const schema = {
       key: {
         doc: "TLS/SSL key file name",
         format: String,
-        default: undefined, //"server-key.pem",
+        default: undefined, //"privkey.pem",
         env: "SERVER_HTTPS_KEY",
         arg: "server-https-key",
       },
       cert: {
         doc: "TLS/SSL sert file name",
         format: String,
-        default: undefined, //"server-cert.pem",
+        default: undefined, //"cert.pem",
         env: "SERVER_HTTPS_SERT",
         arg: "server-https-sert",
+      },
+      ca: {
+        doc: "TLS/SSL ca file name",
+        format: String,
+        default: undefined, //"chain.pem",
+        env: "SERVER_HTTPS_CA",
+        arg: "server-https-ca",
       },
       // PFX
       pfx: {

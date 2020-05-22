@@ -8,8 +8,11 @@ services:
       PORT: 80
       DATA_DIR: /data
       DB_HOST: mongodb
+      #ACME_CHALLENGE: "*.*"
+    env_file: .env
     volumes:
-      - "../../data/web-srv:/data"
+      #- "../data/web-srv/acme-challenge:/web-srv/public/.well-known/acme-challenge"
+      - "../data/web-srv:/data"
     ports:
       - 80:80
       - 443:443
@@ -21,4 +24,4 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - "../../data/mongodb:/data"
+      - "../data/mongodb:/data"

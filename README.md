@@ -95,5 +95,5 @@ Create a file containing just this data:
 
 And make it available on your web server at this URL:
 
-http://testnet.leopays.dev/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
+http://leopays.dev/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
 

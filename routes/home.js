@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
+
+
 router.get('/', (req, res, next) => {
 
   console.log('GET home page', req.t);
   res.render('index', {
     lang: req.language,
     title: req.t('title'),
-    description: req.t('description'),
+    description: req.t('description', { projName:req.t('projName') }),
     noscript: req.t('noscript'),
   });
 });

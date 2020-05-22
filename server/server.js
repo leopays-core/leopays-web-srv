@@ -58,6 +58,8 @@ class Server {
         this.logger.debug('key & cert defined');
         httpsOptions.key = getFile(cfg.get('server.https.key'));
         httpsOptions.cert = getFile(cfg.get('server.https.cert'));
+        if (cfg.get('server.https.ca') !== undefined)
+          httpsOptions.ca = getFile(cfg.get('server.https.ca'));
       } else {
         this.logger.fatal('HTTPS (TLS/SSL) Server Launch Error '
           + '(pfx & passphrase and key & cert undefined)');

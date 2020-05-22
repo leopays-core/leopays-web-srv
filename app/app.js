@@ -31,8 +31,8 @@ app.locals.layout = fs.existsSync('./react-app')
   ? 'layout-for-react-app' 
   : 'layout';
 app.locals.lang = 'en';
-app.locals.title = 'LeoPays';
-app.locals.description = 'LeoPays - An open source smart contract platform.';
+app.locals.title = "LeoPays";
+app.locals.description = "LeoPays";
 app.locals.noscript = 'You need to enable JavaScript to run this app.';
 //api/user/auth/...
 app.use(helmet());

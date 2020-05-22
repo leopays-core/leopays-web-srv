@@ -8,6 +8,7 @@ const logger = require('./logger');
 const passport = require('./passport');
 const server = require('./server');
 const session = require('./session');
+const acmeChallenge = require('./acme-challenge');
 
 
 // Define a schema
@@ -24,6 +25,7 @@ const schema = Object.assign(
   passport,
   server,
   session,
+  acmeChallenge,
 );
 
 module.exports = schema;

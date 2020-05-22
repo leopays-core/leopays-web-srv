@@ -1,18 +1,27 @@
-// https://auth0.com/docs/jwks
-// https://auth0.com/docs/tokens/reference/jwt/jwks-properties
 const express = require('express');
 const router = express.Router();
+const cfg = require('../../config/cfg');
 
 
-router.get('/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g', (req, res, next) => {
-  res.send('7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g.pZ3vjRmDs3wFsuLlAKMfECnOxFhl4Hwg2TDAw_0oKBE');
-  /*
-sudo certbot certonly --manual -d testnet.milliard.money
+
+router.get('/:key', (req, res, next) => {
+  const re = new RegExp(`^${req.params.key}.\\w+`);
+  const arr = cfg.get('acme-challenge');
+  const str = arr.find((element, index, array) => re.test(element));
+  if (str !== undefined)
+    return res.send(str);
+  return next();
+});
+
+module.exports = router;
+
+/*
+sudo certbot certonly --manual -d domain.name -d www.domain.name
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
 Performing the following challenges:
-http-01 challenge for testnet.milliard.money
+http-01 challenge for domain.name
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 NOTE: The IP of this machine will be publicly logged as having requested this
@@ -30,10 +39,10 @@ Create a file containing just this data:
 
 And make it available on your web server at this URL:
 
-http://testnet.milliard.money/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
+http://domain.name/.well-known/acme-challenge/7gqsQSvU8jE29zyqP0xISJztw_vBjXzvz1D_oN_X99g
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-/etc/letsencrypt/live/testnet.milliard.money/README
+/etc/letsencrypt/live/domain.name/README
 This directory contains your keys and certificates.
 
 `privkey.pem`  : the private key for your certificate.
@@ -50,9 +59,7 @@ We recommend not moving these files. For more information, see the Certbot
 User Guide at https://certbot.eff.org/docs/using.html#where-are-my-certificates.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-sudo cp /etc/letsencrypt/live/testnet.milliard.money/fullchain.pem .
-sudo cp /etc/letsencrypt/live/testnet.milliard.money/privkey.pem .
+sudo cp /etc/letsencrypt/live/domain.name/privkey.pem .
+sudo cp /etc/letsencrypt/live/domain.name/cert.pem .
+sudo cp /etc/letsencrypt/live/domain.name/chain.pem .
 */
-});
-
-module.exports = router;
