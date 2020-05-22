@@ -27,8 +27,8 @@ const passport = require('../config/passport');
 
 const app = express();
 hbs.localsAsTemplateData(app);
-app.locals.layout = fs.existsSync('./react-app') 
-  ? 'layout-for-react-app' 
+app.locals.layout = fs.existsSync('./react-app')
+  ? 'layout-for-react-app'
   : 'layout';
 app.locals.lang = 'en';
 app.locals.title = "LeoPays";
