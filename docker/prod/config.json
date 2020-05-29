@@ -1,0 +1,111 @@
+{
+  "env": "production",
+  "data": {
+    "dir": "/data"
+  },
+  "config": {
+    "file": "config.json"
+  },
+  "db": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "name": "DB",
+    "options": {
+      "bufferCommands": true,
+      "useNewUrlParser": true,
+      "autoIndex": true,
+      "autoReconnect": true
+    }
+  },
+  "jwt": {
+    "algorithms": [
+      "RS256",
+      "HS256"
+    ],
+    "sign_by": "key",
+    "secret": "jwt secret",
+    "secret_algorithm": "HS256",
+    "key_algorithm": "RS256",
+    "expiresInDays": 15,
+    "issuer": "https://leopays.dev/"
+  },
+  "links": {
+    "url": "https://leopays.dev/"
+  },
+  "logger": {
+    "level": "trace",
+    "appenders": {
+      "stdout": true,
+      "stderr": false,
+      "gelf": false,
+      "file": true
+    },
+    "gelf": {
+      "host": "localhost",
+      "port": 12201,
+      "hostname": "web-srv_",
+      "facility": "web-srv",
+      "customFields": {}
+    },
+    "file": {
+      "name": "debug.log",
+      "pattern": ".yyyy-MM-dd-hh",
+      "keep_file_ext": true,
+      "encoding": "utf-8",
+      "mode": 511,
+      "flags": "a",
+      "compress": false,
+      "always_include_pattern": false,
+      "days_to_keep": 1
+    }
+  },
+  "passport": {
+    "password": {
+      "salt": {
+        "size": 16
+      },
+      "hash": {
+        "iterations": 1,
+        "keylen": 256,
+        "digest": "sha256"
+      }
+    }
+  },
+  "server": {
+    "secure_mode": true,
+    "host": "::",
+    "exclusive": false,
+    "ipv6Only": false,
+    "http": {
+      "port": 80
+    },
+    "https": {
+      "port": 443,
+      "key": "privkey.pem",
+      "cert": "cert.pem",
+      "ca": "chain.pem"
+    },
+    "https_redirect": true,
+    "www_redirect": false,
+    "without_www_redirect": false
+  },
+  "session": {
+    "name": "sid",
+    "secret": "keyboard^cat",
+    "resave": false,
+    "saveUninitialized": false,
+    "store": {
+      "secret": "keyboard^cat",
+      "algorithm": "GCM",
+      "hashing": "sha512",
+      "encodeas": "hex",
+      "key_size": 32,
+      "iv_size": 16,
+      "at_size": 16
+    },
+    "cookie": {
+      "maxAge": 60000,
+      "secure": false
+    }
+  }
+}

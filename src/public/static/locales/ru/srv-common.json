@@ -1,0 +1,16 @@
+{
+  "projName": "LeoPays",
+  "title": "LeoPays",
+  "subTitle": "",
+  "description": "{{projName}}.",
+  "noscript": "Вам нужно включить JavaScript, чтобы запустить это приложение.",
+  "Legal": "Юридическая информация",
+  "Legal Description": "Найти юридическую информацию и ресурсы для продуктов и услуг {{projName}}.",
+  "Privacy Policy": "Политика конфиденциальности",
+  "Privacy Policy Description": "Политика конфиденциальности Description",
+  "Support": "Поддержка",
+  "Official projName Support": "Официальная поддержка {{projName}}",
+  "Support Description": "Поддержка {{projName}} здесь, чтобы помочь. Узнайте больше о популярных темах и найдите ресурсы, которые помогут вам со всеми вашими продуктами {{projName}}.",
+  "Terms": "Условия обслуживания",
+  "Terms Description": "Условия обслуживания Description"
+}

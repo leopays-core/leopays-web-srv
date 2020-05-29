@@ -1,33 +1,35 @@
 {
-  "name": "web-srv",
-  "version": "0.2.0",
-  "description": "LeoPays web server",
+  "name": "leopays-srv",
+  "version": "0.0.0",
+  "description": "LeoPays server",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
   "author": {
     "name": "LeoPays",
-    "email": "developers@leopays.dev",
+    "email": "dev@leopays.dev",
     "url": "https://leopays.dev/"
   },
-  "homepage": "https://github.com/leopays-core/web-srv#readme",
+  "homepage": "https://github.com/leopays-core/leopays-web-srv#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leopays-core/web-srv.git"
+    "url": "https://github.com/leopays-core/leopays-web-srv.git"
   },
   "bugs": {
-    "url": "https://github.com/leopays-core/web-srv/issues",
-    "email": "developers@leopays.dev"
+    "url": "https://github.com/leopays-core/leopays-web-srv/issues",
+    "email": "dev@leopays.dev"
   },
-  "main": "./bin/www",
+  "bin": "./bin/srv",
   "scripts": {
     "start": "yarn run start:dev",
-    "start:dev": "nodemon ./bin/www",
-    "start:prod": "node ./bin/www"
+    "start:dev": "nodemon ./bin/srv",
+    "start:prod": "node ./bin/srv"
   },
   "dependencies": {
     "@log4js-node/gelf": "^1.0.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
-    "connect-mongo": "^3.1.2",
+    "connect-mongo": "^3.2.0",
+    "connect-redis": "^4.0.4",
     "convict": "^5.2.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
@@ -56,10 +58,12 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1",
     "passport-local-mongoose-email": "^0.1.4",
+    "redis": "^3.0.2",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.4"
   },
-  "contributors": []
+  "contributors": [],
+  "keywords": []
 }

@@ -1,0 +1,16 @@
+{
+  "projName": "LeoPays",
+  "title": "LeoPays",
+  "subTitle": "",
+  "description": "{{projName}}.",
+  "noscript": "You need to enable JavaScript to run this app.",
+  "Legal": "Legal",
+  "Legal Description": "Find legal information and resources for {{projName}} products and services.",
+  "Privacy Policy": "Privacy Policy",
+  "Privacy Policy Description": "Privacy Policy Description",
+  "Support": "Support",
+  "Official projName Support": "Official {{projName}} Support",
+  "Support Description": "{{projName}} support is here to help. Learn more about popular topics and find resources that will help you with all of your {{projName}} products.",
+  "Terms": "Terms",
+  "Terms Description": "Terms Description"
+}

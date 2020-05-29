@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+global.Promise = require('bluebird')
+  .config({ cancellation: true });
+const { connectDb, models } = require('../src/config/mongodb');
+const server = require('../src/server');
+
+const eraseDatabaseOnSync = true;
+
+connectDb().then(async (db) => {
+  if (eraseDatabaseOnSync) {
+    await Promise.all([
+      //models.User.deleteMany({}),
+      //models.Email.deleteMany({}),
+    ]);
+  }
+  const srv = new server();
+  srv.start();
+});
