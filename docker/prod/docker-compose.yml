@@ -2,7 +2,7 @@ version: "3"
 
 services:
   srv:
-    image: leopays/srv:stub
+    image: leopays/web-srv:stub
     environment:
       NODE_ENV: production
       PORT: 80

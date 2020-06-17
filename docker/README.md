@@ -39,3 +39,10 @@ cd ./docker
 sh ./image_build.sh
 sh ./image_push.sh
 ```
+
+
+```bash
+cat <<EOF > .env
+ACME_CHALLENGE=
+EOF
+```
