@@ -16,6 +16,22 @@ router.get('/:key', (req, res, next) => {
 module.exports = router;
 
 /*
+# Add Certbot PPA
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+
+# Install Certbot
+sudo apt-get install -y certbot
+
+
+sudo certbot certonly --preferred-challenges dns --manual \
+  -m admin@domain.name --agree-tos \
+  -d domain.name
+
+
 sudo certbot certonly --manual -d domain.name -d www.domain.name
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
