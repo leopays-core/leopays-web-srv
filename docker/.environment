@@ -1,3 +1,3 @@
 export ORG=leopays
-export REPO=web-srv
-export VERSION=stub
+export REPO=web-srv:stub
+export VERSION=v0.0.0
