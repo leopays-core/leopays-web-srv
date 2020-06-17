@@ -82,7 +82,7 @@ cat <<EOF > config.json
     }
   },
   "server": {
-    "secure_mode": false,
+    "secure_mode": true,
     "host": "::",
     "exclusive": false,
     "ipv6Only": false,

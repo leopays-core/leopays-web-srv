@@ -25,6 +25,9 @@ sudo apt-get update
 # Install Certbot
 sudo apt-get install -y certbot
 
+sudo certbot certonly --standalone  \
+  -m admin@domain.name --agree-tos \
+  -d domain.name
 
 sudo certbot certonly --preferred-challenges dns --manual \
   -m admin@domain.name --agree-tos \
