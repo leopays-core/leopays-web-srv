@@ -1,9 +1,8 @@
 FROM node:lts
 
-ENV NODE_ENV production
-ENV DATA_DIR /data
-
 ARG release=stub
+
+ENV NODE_ENV=production DATA_DIR=/data
 
 WORKDIR /srv
 

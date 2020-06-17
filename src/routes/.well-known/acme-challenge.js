@@ -3,7 +3,6 @@ const router = express.Router();
 const cfg = require('../../config');
 
 
-
 router.get('/:key', (req, res, next) => {
   const re = new RegExp(`^${req.params.key}.\\w+`);
   const arr = cfg.get('acme-challenge');

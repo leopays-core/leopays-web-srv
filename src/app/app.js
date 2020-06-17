@@ -1,8 +1,3 @@
-/**
- * Main application.
- * @module /app
-**/
-
 const fs = require('fs');
 const path = require('path');
 const createError = require('http-errors');

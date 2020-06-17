@@ -1,14 +1,3 @@
-/**
- * A simple application for redirecting HTTP & without WWW requests in production mode.
- * 
- * The HTTP response status code 301 Moved Permanently is used for permanent 
- * URL redirection, meaning current links or records using the URL that 
- * the response is received for should be updated. The new URL should be 
- * provided in the Location field included with the response.
- * 
- * @module /app-redirect
-**/
-
 const fs = require('fs');
 const path = require('path');
 const createError = require('http-errors');
