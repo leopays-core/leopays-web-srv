@@ -3,7 +3,7 @@ FROM node:lts
 ENV NODE_ENV production
 ENV DATA_DIR /data
 
-ARG release=latest
+ARG release=stub
 
 WORKDIR /srv
 

@@ -2,7 +2,7 @@ version: "3"
 
 services:
   srv:
-    image: leopays/srv:latest
+    image: leopays/srv:stub
     environment:
       NODE_ENV: production
       PORT: 80
@@ -14,24 +14,5 @@ services:
       #- "../data/srv/acme-challenge:/srv/public/.well-known/acme-challenge"
       - "../data/srv:/data"
     ports:
-      - 80:80
-      - 443:443
-    links:
-      - mongodb
-      - redisdb
-
-  mongodb:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - "../data/mongodb/data:/data"
-
-  redisdb:
-    image: redis
-    #command: redis-server /usr/local/etc/redis/redis.conf
-    ports:
-      - "6379:6379"
-    volumes:
-      #- "../data/redisdb/config/redis.conf:/usr/local/etc/redis/redis.conf"
-      - "../data/redisdb/data:/data"
+      - "80:80"
+      - "443:443"
