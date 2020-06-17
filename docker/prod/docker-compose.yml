@@ -1,18 +1,17 @@
 version: "3"
 
 services:
-  srv:
+  web-srv:
     image: leopays/web-srv:stub
     environment:
       NODE_ENV: production
       PORT: 80
       DATA_DIR: /data
-      DB_HOST: mongodb
       #ACME_CHALLENGE: "*.*"
     env_file: .env
     volumes:
       #- "../data/srv/acme-challenge:/srv/public/.well-known/acme-challenge"
-      - "../data/srv:/data"
+      - "../../../data/web-srv:/data"
     ports:
       - "80:80"
       - "443:443"
