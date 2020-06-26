@@ -1323,10 +1323,10 @@ jsrsasign-util@^1.0.0:
   resolved "https://registry.yarnpkg.com/jsrsasign-util/-/jsrsasign-util-1.0.0.tgz#ce94ec1aa119c39134c967ae784f838f2e2903e6"
   integrity sha1-zpTsGqEZw5E0yWeueE+Djy4pA+Y=
 
-jsrsasign@^8.0.12:
-  version "8.0.15"
-  resolved "https://registry.yarnpkg.com/jsrsasign/-/jsrsasign-8.0.15.tgz#0d56856efa75fad84b578655249700f500388112"
-  integrity sha512-6UKHqnNs5lYROn03wf1BTw7DQx5tW616DTigjbo0JHV97D3HzIqYmPVCBSNsfEfQOrfpFqmPZJvaC3cMNOT0Yw==
+jsrsasign@^8.0.19:
+  version "8.0.19"
+  resolved "https://registry.yarnpkg.com/jsrsasign/-/jsrsasign-8.0.19.tgz#c36260f103cc639a9202e5243d7544cde48d53a7"
+  integrity sha512-qf+F41huTh9ThXj5n3yfAJJRp8vx05JYbGlGvCjusYX50rsfqY6ASK08LCOutl0yA1BHIpGG8bd1w5x9aGy7Zg==
 
 jwa@^1.4.1:
   version "1.4.1"
